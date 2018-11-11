@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "871114904028",
+    "firebase_url": "https://sentinela2-cc023.firebaseio.com",
+    "project_id": "sentinela2-cc023",
+    "storage_bucket": "sentinela2-cc023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871114904028:android:6866b21d154ca268",
+        "android_client_info": {
+          "package_name": "com.example.cybersecurity.hackaton.sentinela2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871114904028-35ous68r08carqvlvf9nm7c64forbee6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ2rXY6oes6IxkqeDIvodAbKYrTxUwyhY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

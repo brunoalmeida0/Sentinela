@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_reportar) {
             Intent intent = new Intent(getApplicationContext(), FormActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_perfil) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
