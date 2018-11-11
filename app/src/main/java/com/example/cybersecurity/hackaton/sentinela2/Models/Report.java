@@ -9,8 +9,7 @@ public class Report {
     private String hora;
     private Date data;
     private String descricao;
-
-
+    
     public int getId() {
         return id;
     }
