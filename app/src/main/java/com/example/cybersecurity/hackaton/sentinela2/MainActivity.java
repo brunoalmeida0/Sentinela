@@ -1,8 +1,12 @@
 package com.example.cybersecurity.hackaton.sentinela2;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +20,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import java.util.zip.Inflater;
+
+import static com.example.cybersecurity.hackaton.sentinela2.R.id.container;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,19 +82,29 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_mapa) {
-            Inflater inflater;
-            ViewGroup container = R.id.
-            View rootView = inflater.inflate(R.layout.activity_maps, container, false);
-            linearLayout = (LinearLayout) rootView.findViewById(R.id.linearlayout);
+            Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_assistente) {
 
         } else if (id == R.id.nav_reportar) {
-
+            Intent intent = new Intent(getApplicationContext(), FormActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_perfil) {
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void openFragment(Fragment fragment, int container, boolean stack) {
+        String backStateName = fragment.getClass().getName();
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        if (stack)
+            manager.popBackStackImmediate(backStateName, android.support.v4.app.FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        android.support.v4.app.FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(container, fragment);
+        transaction.addToBackStack(backStateName);
+        transaction.commit();
     }
 }
