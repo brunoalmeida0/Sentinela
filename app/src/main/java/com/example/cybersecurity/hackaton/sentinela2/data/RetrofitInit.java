@@ -1,5 +1,6 @@
 package com.example.cybersecurity.hackaton.sentinela2.data;
 
+import com.example.cybersecurity.hackaton.sentinela2.service.MensagemService;
 import com.example.cybersecurity.hackaton.sentinela2.service.ReportService;
 
 import retrofit2.Retrofit;
@@ -19,5 +20,6 @@ public class RetrofitInit {
     public ReportService getReportService() {
         return this.retrofit.create(ReportService.class);
     }
+    public MensagemService getMensagemService() { return this.retrofit.create(MensagemService.class); }
 
 }
